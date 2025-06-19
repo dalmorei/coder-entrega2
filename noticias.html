@@ -13,18 +13,34 @@
 <body>
 
   <header class="bg-dark text-white">
-    <nav class="navbar navbar-expand-lg container">
-      <a class="navbar-brand text-white" href="index.html">TecnoHoy</a>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-white active" href="noticias.html">Noticias</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="productos.html">Productos</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand fw-bold" href="index.html">TecnoHoy</a>
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
+
 
   <main class="container my-5">
     <h1 class="text-center mb-5">Últimas Noticias Tecnológicas</h1>

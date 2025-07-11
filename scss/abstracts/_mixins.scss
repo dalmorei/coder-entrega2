@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+@mixin typing-effect($char-count, $duration: 2s, $font-size: clamp(3.5rem, 6vw, 2.5rem)) {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid $gray-dark;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: $font-size;
+  width: 0;
+  max-width: 100%;
+  animation: typing-#{$char-count} $duration steps(#{$char-count}, end) forwards,
+             blink-caret 0.75s step-end infinite;
+}
+
+@mixin typing-keyframes($char-count) {
+  @keyframes typing-#{$char-count} {
+    from {
+      width: 0;
+    }
+    to {
+      width: #{$char-count}ch;
+    }
+  }
+}

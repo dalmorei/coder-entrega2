@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-family;
+  background-color: $gray-light;
+  color: $gray-dark;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; // Evita scroll horizontal
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+}
+
+.lead {
+  color: $text-muted;
+  font-size: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: $primary;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

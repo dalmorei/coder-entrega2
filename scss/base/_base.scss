@@ -69,3 +69,52 @@ html {
 .typing-text {
   @include typing-effect(16);
 }
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    max-width: 900px;
+  }
+
+  h1, p {
+    color: white;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 50vh;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

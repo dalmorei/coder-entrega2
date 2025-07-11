@@ -1,4 +1,6 @@
 @use '../abstracts' as *;
+@use '../abstracts/mixins' as *;
+
 
 body {
   font-family: $font-family;
@@ -7,7 +9,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; // Evita scroll horizontal
+  overflow-x: hidden;
 }
 
 img {
@@ -49,74 +51,21 @@ h2 {
   }
 }
 
-.typing-effect h1,
-.typing-effect p {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid rgba(33, 37, 41, 0.75); // cursor
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-.typing-effect h1 {
-  width: 0;
-  animation-delay: 0s;
-}
-
-.typing-effect p {
-  width: 0;
-  animation-delay: 4s;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes blink-caret {
   0%, 100% {
     border-color: transparent;
   }
   50% {
-    border-color: rgba(33, 37, 41, 0.75);
-  }
-}
-
-
-.typing-text {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #212529;
-  width: 0;
-  animation: typing 3s steps(35, end) forwards, blink 0.75s step-end infinite;
-}
-
-// Simula la escritura letra por letra
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-// Cursor parpadeante
-@keyframes blink {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #212529;
+    border-color: $gray-dark;
   }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@include typing-keyframes(16);
+
+.typing-text {
+  @include typing-effect(16);
 }

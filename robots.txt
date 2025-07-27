@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dalmorei.github.io/coder-entrega2/sitemap.xml
